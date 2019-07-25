@@ -3,9 +3,10 @@
     show the list of Restaurants by using Google Map API 
     </p>
 
-    <!-- <p><a class="btn btn-success btn-lg" target="_blank">search </a></p> -->
+    
 
-    <input id="pac-input" class="controls" type="text" placeholder="Search Box">
+    <input id="pac-input"  type="text" value="Bangsue" placeholder="Search Box">
+    <!-- <p><a class="btn btn-success btn-lg" target="_blank">search </a></p> -->
     <!-- <div id="map"></div> -->
 
     <div id="map" style="width:100%;height:400px;"></div>
@@ -33,7 +34,7 @@
         // Create the search box and link it to the UI element.
         var input = document.getElementById('pac-input');
         var searchBox = new google.maps.places.SearchBox(input);
-        map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+        // map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
 
         // Bias the SearchBox results towards current map's viewport.
         map.addListener('bounds_changed', function() {
