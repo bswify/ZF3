@@ -15,7 +15,11 @@ class IndexController extends AbstractActionController
     public function indexAction()
     {
         //เรียก api เอาข้อมูลร้านอาหาร  ต้องรับ location มาจากหน้า index  ตอนนี้  รับมาไม่เป้น เลยเซตไปก่อน
-        $url="https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=13.803011,100.538813&radius=1500&type=restaurant&keyword=Bangsue&key=AIzaSyDtbkvX3zjP15y_1dQWzoxvAlMLsgJSEuw";
+        $lat = 13.803011;
+        $long = 100.538813;
+        $keyword = "Bangsue";
+
+        $url="https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=".$lat.",".$long."&radius=1500&type=restaurant&keyword=".$keyword."&key=AIzaSyDtbkvX3zjP15y_1dQWzoxvAlMLsgJSEuw";
         $headers = array(
         'Content-type: application/json; charset=UTF-8'
         );
