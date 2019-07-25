@@ -28,13 +28,17 @@ class IndexController extends AbstractActionController
         curl_setopt($ch, CURLOPT_HTTPGET , 1);
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
         $response = curl_exec($ch);
-        // echo $response ; exit();
+        $character = json_decode($response);
+//         echo $response ; exit();
         // return $response;
         // return $this->render('index');
-        // session_start() ;
-        // $_SESSION['response'] =$response;
-        $response2->setContent(json_encode($response));
-        return $response2;
-        // return new ViewModel();
+//        $character = json_decode($response);
+
+//        $view = new ViewModel($character);
+//        $view->setTemplate('module/controler/index.phtml'); // path to phtml file under view folder
+//        return $this->render('index',$character);
+
+         return new ViewModel();
+//        return $this->render('index', $character);
     }
 }
