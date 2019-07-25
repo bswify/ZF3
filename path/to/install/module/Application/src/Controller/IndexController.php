@@ -33,6 +33,7 @@ class IndexController extends AbstractActionController
         $character = json_decode($response);
         // จะส่งข้อมูล $response ไปแสเงใน table ในหน้า index
 //         echo $response ; exit();
+//        return  $response;
          return new ViewModel();
 
     }
