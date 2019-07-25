@@ -13,9 +13,7 @@
 
 return [
 
-    'GMaps'=> array(
-		'api_key' => 'AIzaSyCP7RNiyWiYUj-4JrlrgvhXl2lRE4zIKlo',
-	),
+   
     // ...
 ];
 
