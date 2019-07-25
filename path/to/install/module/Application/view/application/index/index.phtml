@@ -1,20 +1,55 @@
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
 <div class="jumbotron">
     <p>
     show the list of Restaurants by using Google Map API 
     </p>
-
-    
-
     <input id="pac-input"  type="text" value="Bangsue" placeholder="Search Box">
     <!-- <p><a class="btn btn-success btn-lg" target="_blank">search </a></p> -->
     <!-- <div id="map"></div> -->
-
     <div id="map" style="width:100%;height:400px;"></div>
 
-
-
-    
 </div>
+<div class="container">
+  <h2>List of Restaurants</h2>
+      
+  <table class="table table-dark table-hover">
+    <thead>
+      <tr>
+        <th>Icon</th>
+        <th>Restaurantsname</th>
+        <th>Location</th>
+      </tr>
+    </thead>
+    <tbody>
+    <?php 
+   $response =  $_SESSION['response'];
+//    echo $response ; exit();
+//    $character = json_decode($response);
+   while ($character = json_decode($response)) {
+   
+   ?>    
+      <tr>
+        <td><?php echo $character->icon?></td>
+        <td><?php echo $character->name?></td>
+        <td><?php echo $character->vicinity?></td>
+      </tr>
+
+   <?php 
+   }
+   ?>   
+      
+    </tbody>
+  </table>
+</div>
+
 <script>
       // This example adds a search box to a map, using the Google Place Autocomplete
       // feature. People can enter geographical searches. The search box will return a
@@ -26,7 +61,7 @@
 
       function initAutocomplete() {
         var map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: -33.8688, lng: 151.2195},
+          center: {lat: 13.803011, lng: 100.538813},
           zoom: 13,
           mapTypeId: 'roadmap'
         });
@@ -94,5 +129,5 @@
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDtbkvX3zjP15y_1dQWzoxvAlMLsgJSEuw&libraries=places&callback=initAutocomplete"
          async defer></script>
-
+    
 
