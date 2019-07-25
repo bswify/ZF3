@@ -14,9 +14,7 @@ class IndexController extends AbstractActionController
 {
     public function indexAction()
     {
-
-        // $url = "https://app.jasmine.com/jpmapi/workschedule/v1/employeeid/".$employeeid2."/workdate"."/".$workdate;
-        
+        //เรียก api เอาข้อมูลร้านอาหาร  ต้องรับ location มาจากหน้า index  ตอนนี้  รับมาไม่เป้น เลยเซตไปก่อน
         $url="https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=13.803011,100.538813&radius=1500&type=restaurant&keyword=Bangsue&key=AIzaSyDtbkvX3zjP15y_1dQWzoxvAlMLsgJSEuw";
         $headers = array(
         'Content-type: application/json; charset=UTF-8'
@@ -29,16 +27,9 @@ class IndexController extends AbstractActionController
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
         $response = curl_exec($ch);
         $character = json_decode($response);
+        // จะส่งข้อมูล $response ไปแสเงใน table ในหน้า index
 //         echo $response ; exit();
-        // return $response;
-        // return $this->render('index');
-//        $character = json_decode($response);
-
-//        $view = new ViewModel($character);
-//        $view->setTemplate('module/controler/index.phtml'); // path to phtml file under view folder
-//        return $this->render('index',$character);
-
          return new ViewModel();
-//        return $this->render('index', $character);
+
     }
 }
