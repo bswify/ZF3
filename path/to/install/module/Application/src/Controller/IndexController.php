@@ -28,11 +28,13 @@ class IndexController extends AbstractActionController
         curl_setopt($ch, CURLOPT_HTTPGET , 1);
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
         $response = curl_exec($ch);
-        echo $response ; exit();
+        // echo $response ; exit();
         // return $response;
         // return $this->render('index');
         // session_start() ;
         // $_SESSION['response'] =$response;
-        return new ViewModel();
+        $response2->setContent(json_encode($response));
+        return $response2;
+        // return new ViewModel();
     }
 }
