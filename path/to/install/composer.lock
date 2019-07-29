@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "24f6543f7f851398d8185a9c53caf85a",
+    "content-hash": "192a38c5d01265fef9855a21f5db2eb8",
     "packages": [
         {
             "name": "container-interop/container-interop",
@@ -36,6 +36,94 @@
             "description": "Promoting the interoperability of container objects (DIC, SL, etc.)",
             "homepage": "https://github.com/container-interop/container-interop",
             "time": "2017-02-14T19:40:03+00:00"
+        },
+        {
+            "name": "leuchtdiode/pimcore-rest-api",
+            "version": "0.1.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/leuchtdiode/pimcore-rest-api.git",
+                "reference": "69035ae8fd41fa57d946e117dd4cfda66108aa7e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/leuchtdiode/pimcore-rest-api/zipball/69035ae8fd41fa57d946e117dd4cfda66108aa7e",
+                "reference": "69035ae8fd41fa57d946e117dd4cfda66108aa7e",
+                "shasum": ""
+            },
+            "require": {
+                "netresearch/jsonmapper": "^0.11.0",
+                "php": ">=5.6",
+                "zendframework/zend-http": "~2.5"
+            },
+            "suggest": {
+                "zendframework/zend-cache": "Using Zend cache to minimize REST API calls"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "PimcoreRestApi\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Alex Schloegl",
+                    "role": "Developer",
+                    "email": "alex@try2catch.com",
+                    "homepage": "http://try2catch.com"
+                }
+            ],
+            "description": "Zend Framework 2 module for accessing pimcore via its REST API",
+            "homepage": "https://github.com/leuchtdiode/pimcore-rest-api",
+            "keywords": [
+                "module",
+                "pimcore",
+                "zend framework 2"
+            ],
+            "time": "2016-06-13T12:05:04+00:00"
+        },
+        {
+            "name": "netresearch/jsonmapper",
+            "version": "v0.11.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cweiske/jsonmapper.git",
+                "reference": "979abda4b128415c642b06f07db615e75cfd3173"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cweiske/jsonmapper/zipball/979abda4b128415c642b06f07db615e75cfd3173",
+                "reference": "979abda4b128415c642b06f07db615e75cfd3173",
+                "shasum": ""
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.2.*",
+                "squizlabs/php_codesniffer": "~1.5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "JsonMapper": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "OSL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Christian Weiske",
+                    "email": "cweiske@cweiske.de",
+                    "homepage": "http://github.com/cweiske/jsonmapper/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Map nested JSON structures onto PHP classes",
+            "time": "2016-04-14T21:59:35+00:00"
         },
         {
             "name": "psr/container",

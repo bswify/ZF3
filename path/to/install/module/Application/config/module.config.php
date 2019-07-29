@@ -7,6 +7,7 @@
 
 namespace Application;
 
+use ReataurantControllerFactory;
 use Zend\Router\Http\Literal;
 use Zend\Router\Http\Segment;
 use Zend\ServiceManager\Factory\InvokableFactory;
@@ -34,11 +35,23 @@ return [
                     ],
                 ],
             ],
+//            'restaurant' => [
+//                'type'    => Segment::class,
+//                'options' => [
+//                    'route'    => '/restaurant[/:lat:long:keyword]',
+//                    'defaults' => [
+//                        'controller' => Controller\Api\ApiRestaurantController::class,
+//
+//                    ],
+//                ],
+//            ],
+
         ],
     ],
     'controllers' => [
         'factories' => [
             Controller\IndexController::class => InvokableFactory::class,
+            Controller\Api\ApiRestaurantController::class => Controller\Api\ApiRestaurantController::class,
         ],
     ],
     'view_manager' => [

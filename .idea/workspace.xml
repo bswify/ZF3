@@ -13,11 +13,6 @@
       <executable />
     </execution>
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>searchBox</find>
-    </findStrings>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -25,9 +20,13 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/path/to/install/module/Application/models" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../testphpdev_scg" />
+    <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\ZF3\path\to\install\module\Application\src\Controller\Api" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\ZF3\path\to\install\module\Application\src" />
     </key>
@@ -55,7 +54,10 @@
       <option name="presentableId" value="Default" />
       <updated>1564042359263</updated>
       <workItem from="1564042368666" duration="24023000" />
-      <workItem from="1564149652448" duration="1220000" />
+      <workItem from="1564149652448" duration="1817000" />
+      <workItem from="1564279674657" duration="7348000" />
+      <workItem from="1564319486549" duration="15524000" />
+      <workItem from="1564376014373" duration="794000" />
     </task>
     <servers />
   </component>
@@ -67,7 +69,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

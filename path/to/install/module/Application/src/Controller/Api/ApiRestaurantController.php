@@ -5,26 +5,21 @@
  * @license   http://framework.zend.com/license/new-bsd New BSD License
  */
 
-namespace Application\Controller;
+namespace Application\Controller\Api;
 
 
 
-use Zend\Mvc\Controller\AbstractActionController;
-use Zend\View\Model\ViewModel;
 
-class IndexController extends AbstractActionController
+class ApiRestaurantController
 {
 
-    public function indexAction()
-    {
-         return new ViewModel();
-    }
-    public function getRestaurants(){
-        $lat = 13.803011;
-        $long = 100.538813;
-        $keyword = "Bangsue";
+    public function getRestaurants($lat,$long,$keyword){
+        $lat1 =  $lat;
+        $long1 =  $long;
+        $keyword1 =  $keyword;
+        $key = "AIzaSyDtbkvX3zjP15y_1dQWzoxvAlMLsgJSEuw";
 
-        $url="https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=".$lat.",".$long."&radius=1500&type=restaurant&keyword=".$keyword."&key=AIzaSyDtbkvX3zjP15y_1dQWzoxvAlMLsgJSEuw";
+        $url="https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=".$lat1.",".$long1."&radius=1500&type=restaurant&keyword=".$keyword1."&key=".$key;
         $headers = array(
             'Content-type: application/json; charset=UTF-8'
         );
@@ -35,10 +30,10 @@ class IndexController extends AbstractActionController
         curl_setopt($ch, CURLOPT_HTTPGET , 1);
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
         $response = curl_exec($ch);
-        $character = json_decode($response);
-        //    echo  $response;exit();
+//        $character = json_decode($response);
+            echo  $response;exit();
         $data = $character->results;
-//        return $data ;
+        return $data ;
     }
 
 }
